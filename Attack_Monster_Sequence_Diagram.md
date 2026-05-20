@@ -7,7 +7,7 @@ sequenceDiagram
     participant 플레이어클래스 as 플레이어
     participant 캐릭터 as 캐릭터 (전사 / 마법사)
 
-    플레이어->>UI: 몬스터 공격 요청 (캐릭터 선택)
+    플레이어->>UI: 몬스터 공격 요청
     activate UI
     UI->>전투: 몬스터공격(캐릭터)
     activate 전투
