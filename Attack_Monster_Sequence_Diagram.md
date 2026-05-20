@@ -9,10 +9,10 @@ sequenceDiagram
 
     플레이어->>UI: 몬스터 공격 요청
     activate UI
-    UI->>전투: 몬스터공격(캐릭터)
+    UI->>전투: 몬스터공격(플레이어id, 캐릭터)
     activate 전투
 
-    전투->>플레이어클래스: 플레이어체크()
+    전투->>플레이어클래스: 플레이어체크(플레이어id)
     activate 플레이어클래스
     플레이어클래스-->>전투: 체크 결과 (true / false)
     deactivate 플레이어클래스
