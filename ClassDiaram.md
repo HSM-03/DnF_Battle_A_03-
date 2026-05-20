@@ -17,7 +17,7 @@ class 플레이어 {
 
 class 전투 {
     +캐릭터생성(플레이어id: String, 캐릭터명: String, 직업: String, 레벨: int) boolean
-    +몬스터공격() void
+    +몬스터공격(플레이어id: String, 캐릭터: 캐릭터) void
 }
 
 class 캐릭터 {
@@ -39,7 +39,7 @@ class 마법사 {
 
 Create_Character_UI ..> 전투 : 요청
 Attack_Monster_UI ..> 전투 : 요청
-전투 ..> 플레이어 : 플레이어체크
-전투 ..> 캐릭터 : 생성
+전투 --> 플레이어 : 플레이어체크
+전투 --> 캐릭터 : 생성
 전사 --|> 캐릭터 : 상속
 마법사 --|> 캐릭터 : 상속
