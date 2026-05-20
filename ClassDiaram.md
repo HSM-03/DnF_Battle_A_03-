@@ -17,7 +17,7 @@ class 플레이어 {
 
 class 전투 {
     +캐릭터생성(플레이어id: String, 캐릭터명: String, 직업: String, 레벨: int) boolean
-    +몬스터공격() void
+    +몬스터공격(플레이어id: String, 캐릭터: 캐릭터) void
 }
 
 class 캐릭터 {
