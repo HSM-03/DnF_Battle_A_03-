@@ -23,11 +23,12 @@ public abstract class 캐릭터 {
     }
 
     /** 직업별로 스킬명과 데미지 계산식이 다르게 구현된다. */
+    public abstract String 스킬명_가져오기();
     public abstract double 스킬발동();
 
-    public String get캐릭터명() { return 캐릭터명; }
-    public int    get레벨()   { return 레벨; }
-    public int    getHP()    { return HP; }
-    public double get공격력() { return 공격력; }
-    public 인벤토리 get인벤토리() { return 인벤토리; }
+    public String 캐릭터명_가져오기() { return 캐릭터명; }
+    public int    레벨_가져오기()   { return 레벨; }
+    public int    HP_가져오기()    { return HP; }
+    public double 공격력_가져오기() { return 공격력; }
+    public 인벤토리 인벤토리_가져오기() { return 인벤토리; }
 }

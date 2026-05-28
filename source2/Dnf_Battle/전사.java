@@ -14,8 +14,12 @@ public class 전사 extends 캐릭터 {
     }
 
     @Override
+    public String 스킬명_가져오기() {
+        return "검 휘두르기!";
+    }
+
+    @Override
     public double 스킬발동() {
-        System.out.println("검 휘두르기!");
         return 공격력 * 1.5;
     }
 }

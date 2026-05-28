@@ -43,7 +43,7 @@ public class 길드 {
         return 캐릭터리스트.size();
     }
 
-    public String get길드명()              { return 길드명; }
-    public List<캐릭터> get캐릭터리스트()    { return 캐릭터리스트; }
-    public int get최대인원()               { return 최대인원; }
+    public String 길드명_가져오기()              { return 길드명; }
+    public List<캐릭터> 캐릭터리스트_가져오기()    { return 캐릭터리스트; }
+    public int 최대인원_가져오기()               { return 최대인원; }
 }

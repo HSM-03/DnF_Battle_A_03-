@@ -40,11 +40,11 @@ public class 인벤토리 {
         return 아이템리스트.size();
     }
 
-    public List<아이템> get아이템리스트() {
+    public List<아이템> 아이템리스트_가져오기() {
         return 아이템리스트;
     }
 
-    public int get최대용량() {
+    public int 최대용량_가져오기() {
         return 최대용량;
     }
 }

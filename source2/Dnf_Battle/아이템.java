@@ -32,10 +32,10 @@ public class 아이템 {
         }
     }
 
-    public String get아이템명() { return 아이템명; }
-    public String get타입()   { return 타입; }
-    public int    get가치()   { return 가치; }
-    public String get등급()   { return 등급; }
+    public String 아이템명_가져오기() { return 아이템명; }
+    public String 타입_가져오기()   { return 타입; }
+    public int    가치_가져오기()   { return 가치; }
+    public String 등급_가져오기()   { return 등급; }
 
     @Override
     public String toString() {

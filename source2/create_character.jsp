@@ -11,7 +11,10 @@
     int level   = Integer.parseInt(request.getParameter("level"));
 
     boolean 성공 = 전투.캐릭터생성(pid, name, job, level);   // 내부에서 플레이어체크 수행
-    캐릭터 c = 전투.get캐릭터(pid);
+    캐릭터 c = 전투.캐릭터_가져오기(name);
+    if (성공) {
+        session.setAttribute("현재캐릭터명", name);
+    }
 %>
 <!DOCTYPE html>
 <html lang="ko"><head><meta charset="UTF-8"><title>캐릭터생성 결과</title></head>
@@ -20,11 +23,11 @@
     <% if (성공) { %>
         <p>✅ 캐릭터 생성 성공!</p>
         <ul>
-            <li>캐릭터명: <%= c.get캐릭터명() %></li>
-            <li>레벨: <%= c.get레벨() %></li>
-            <li>HP: <%= c.getHP() %></li>
-            <li>공격력: <%= c.get공격력() %></li>
-            <li>인벤토리: <%= c.get인벤토리().현재개수() %>/<%= c.get인벤토리().get최대용량() %> (빈 인벤토리 자동 생성)</li>
+            <li>캐릭터명: <%= c.캐릭터명_가져오기() %></li>
+            <li>레벨: <%= c.레벨_가져오기() %></li>
+            <li>HP: <%= c.HP_가져오기() %></li>
+            <li>공격력: <%= c.공격력_가져오기() %></li>
+            <li>인벤토리: <%= c.인벤토리_가져오기().현재개수() %>/<%= c.인벤토리_가져오기().최대용량_가져오기() %> (빈 인벤토리 자동 생성)</li>
         </ul>
     <% } else { %>
         <p>❌ 캐릭터 생성 실패 (인증 실패 또는 잘못된 직업). 플레이어id는 "hero" 여야 합니다.</p>

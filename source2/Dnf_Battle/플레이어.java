@@ -20,7 +20,7 @@ public class 플레이어 {
         return "hero".equals(플레이어id);
     }
 
-    public String get플레이어id() {
+    public String 플레이어id_가져오기() {
         return 플레이어id;
     }
 }
